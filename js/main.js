@@ -17,28 +17,15 @@ $(function() {
 
     //plyr.io
 
-    var options1 = {
-    id: 304351216,
-    width: 260,
-    height: 450,
-    loop: true,
-    muted: true,
-    autoplay: true,
-};
+const player1 = new Plyr('#player1', {
+  autoplay: true,
+  loop: {active: true}
+});
 
-var player = new Vimeo.Player('plyr-vimeo1', options1);
-
-var screenWidth = $(window).width();
-
-    var options2 = {
-    id: 286116952,
-    width: screenWidth - 100,
-    loop: true,
-    muted: true,
-    autoplay: true,
-    };
-
-var player = new Vimeo.Player('plyr-vimeo2', options2);
+const player2 = new Plyr('#player2', {
+  autoplay: true,
+  loop: {active: true}
+});
 
 
   // Skrollr
