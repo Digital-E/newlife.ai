@@ -1,0 +1,364 @@
+@font-face {
+  src: url("../fonts/basic_sans_serif_7.ttf");
+  font-family: "basicsans7"
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+}
+
+.jvectormap-zoomin,.jvectormap-zoomout {
+  display: none;
+}
+
+
+
+.navbar {
+  top:0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.logo {
+  opacity:0;
+  position: fixed;
+  margin-left: 75px;
+  margin-top: 50px;
+  width: 75px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.logo svg {
+  fill: white;
+}
+
+.download-button {
+  opacity:0;
+  position: fixed;
+  right: 0;
+  width: 110px;
+  margin-right: 75px;
+  margin-top: 50px;
+}
+
+.download-button:hover {
+  cursor: pointer;
+}
+
+.download-button svg {
+  fill: none;
+}
+
+.div-1 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 1;
+}
+
+.main-title-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font-family: "basicsans7";
+  color: white;
+}
+
+.main-title-container p:nth-child(1) {
+  opacity:0;
+  position: relative;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.main-title-container p:nth-child(2) {
+  opacity:0;
+  position: relative;
+  font-size: 30px;
+}
+
+#plyr-vimeo1 {
+  position: absolute;
+  left: -3px;
+}
+
+.main-screen-container {
+  opacity: 0;
+  display: block;
+  margin: auto;
+  border-radius: 20px;
+  background-color: black;
+  background-image: url("../bgnewlife.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 440px;
+  width: 250px;
+  overflow: hidden;
+}
+
+.div-2 {
+  background-color: black;
+  opacity: 1;
+}
+
+.div-3 {
+  position: relative;
+  margin: 250px 70px 250px 20px;
+  height: 100vh;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.div-3 .text-block {
+  position: absolute;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  font-family: 'basicsans7';
+  font-size: 45pt;
+  color: white;
+  transform: translate(-50%,-50%);
+  line-height: 75px;
+  z-index: 1;
+}
+
+.div-3 .images div:nth-child(n) {
+  border-radius: 25px;
+  overflow: hidden;
+  width: 300px;
+}
+
+.div-3 div:nth-child(n) img {
+  height: 100%;
+  width: 100%;
+}
+
+.div-5 .images div:nth-child(n) {
+  border-radius: 25px;
+  overflow: hidden;
+  width: 300px;
+}
+
+.div-5 div:nth-child(n) img {
+  height: 100%;
+  width: 100%;
+}
+
+.div-3-img1 {
+  position: absolute;
+  top: 200px;
+  margin-left: 100px;
+  transform-origin:'50% 50%';
+  transform: scale(1.5);
+}
+
+.div-3-img2 {
+  position: absolute;
+  top: 200px;
+  right: 100px;
+  transform-origin:'50% 50%';
+  transform: scale(1.5);
+}
+
+.div-5-img1 {
+  position: absolute;
+  top: 200px;
+  margin-left: 100px;
+  transform-origin:'50% 50%';
+  transform: scale(1.5);
+}
+
+.div-5-img2 {
+  position: absolute;
+  top: 200px;
+  right: 100px;
+  transform-origin:'50% 50%';
+  transform: scale(1.5);
+}
+
+
+.div-4 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+#plyr-vimeo2 {
+  opacity: 0;
+  margin: auto;
+  border-radius: 25px;
+  overflow: hidden;
+  width: calc(100vw - 100px);
+}
+
+.div-5 {
+  position: relative;
+  margin: 250px 70px 250px 20px;
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.div-5 .text-block {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  font-family: 'basicsans7';
+  font-size: 45pt;
+  color: white;
+  transform: translate(-50%,-50%);
+  line-height: 75px;
+  z-index: 9;
+}
+
+.div-6 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left-title1 {
+  position: absolute;
+  opacity: 0;
+  margin-top: 215px;
+  left: 25%;
+  font-family: "basicsans7";
+  font-size: 18px;
+  color: white;
+}
+
+.left-title2 {
+  position: absolute;
+  opacity: 0;
+  margin-top: 615px;
+  left: 25%;
+  font-family: "basicsans7";
+  font-size: 18px;
+  color: white;
+}
+
+.left-title3 {
+  position: absolute;
+  opacity: 0;
+  margin-top: 1015px;
+  left: 25%;
+  font-family: "basicsans7";
+  font-size: 18px;
+  color: white;
+}
+
+.right-title-1 {
+  position: absolute;
+  opacity: 0;
+  margin-top: 215px;
+  left: calc(50% + 250px);
+  font-family: "basicsans7";
+  font-size: 18px;
+  color: white;
+  min-width: 300px;
+}
+
+.right-title-2 {
+  position: absolute;
+  opacity: 0;
+  margin-top: 215px;
+  left: calc(50% + 250px);
+  font-family: "basicsans7";
+  font-size: 18px;
+  color: white;
+  min-width: 300px;
+}
+
+.right-title-3 {
+  position: absolute;
+  opacity: 0;
+  margin-top: 215px;
+  left: calc(50% + 250px);
+  font-family: "basicsans7";
+  font-size: 18px;
+  color: white;
+  min-width: 300px;
+}
+
+.right-title-4 {
+  position: absolute;
+  opacity: 0;
+  margin-top: 615px;
+  left: calc(50% + 250px);
+  font-family: "basicsans7";
+  font-size: 18px;
+  color: white;
+  min-width: 300px;
+}
+
+.right-title-5 {
+  position: absolute;
+  opacity: 0;
+  margin-top: 615px;
+  left: calc(50% + 250px);
+  font-family: "basicsans7";
+  font-size: 18px;
+  color: white;
+  min-width: 300px;
+}
+
+.right-title-6 {
+  position: absolute;
+  opacity: 0;
+  margin-top: 615px;
+  left: calc(50% + 250px);
+  font-family: "basicsans7";
+  font-size: 18px;
+  color: white;
+  min-width: 300px;
+}
+
+.right-title-7 {
+  position: absolute;
+  opacity: 0;
+  margin-top: 1015px;
+  left: calc(50% + 250px);
+  font-family: "basicsans7";
+  font-size: 18px;
+  color: white;
+  min-width: 300px;
+}
+
+.right-title-8 {
+  position: absolute;
+  opacity: 0;
+  margin-top: 1015px;
+  left: calc(50% + 250px);
+  font-family: "basicsans7";
+  font-size: 18px;
+  color: white;
+  min-width: 300px;
+}
+
+.right-title-9 {
+  position: absolute;
+  opacity: 0;
+  margin-top: 1015px;
+  left: calc(50% + 250px);
+  font-family: "basicsans7";
+  font-size: 18px;
+  color: white;
+  min-width: 300px;
+}
