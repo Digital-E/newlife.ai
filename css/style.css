@@ -14,6 +14,24 @@ body {
   background-color: black;
 }
 
+.gradient-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+  z-index: 99;
+}
+
+.gradient-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+  z-index: 99;
+}
+
 .jvectormap-zoomin,.jvectormap-zoomout {
   display: none;
 }
@@ -218,6 +236,10 @@ body {
 
 /* PLYR COLOURS */
 
+.plyr__controls {
+  display: none;
+}
+
 .plyr__control--overlaid {
   background-color: #b2ff59;
 }
@@ -382,4 +404,29 @@ body {
   font-size: 18px;
   color: white;
   min-width: 300px;
+}
+
+.thumbnail {
+  opacity: 0;
+  position: fixed;
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  right: 0;
+  top: 50%;
+  border-radius: 25px;
+  z-index: 999;
+}
+
+.thumbnail::after {
+  content:'Have an invite code?';
+  font-family: "basicsans7";
+  color: black;
+  text-align: center;
+  display: block;
+  position: absolute;
+  left: 25px;
+  top: 175px;
+  transform: rotate(-90deg);
+  transform-origin: left;
 }

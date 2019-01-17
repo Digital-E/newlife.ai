@@ -5,6 +5,24 @@ $(function() {
     color: "#b2ff59",
   });
 
+  //getinvitecode
+
+  let modalThing = $('.thumbnail');
+  let modalWidth = modalThing.width();
+  let openModalThing = false;
+  $('.thumbnail').css({'transform':`translateX(${modalWidth-50}px)`});
+
+  $(modalThing).on('click', function() {
+    if (openModalThing) {
+      TweenLite.to(modalThing, 1, {x: modalWidth - 50});
+    } else {
+      TweenLite.to(modalThing, 1, {x: - modalWidth + 500});
+    }
+    openModalThing = !openModalThing;
+      }
+    );
+
+
   //Elements Fade-in
 
     $('.logo').fadeTo( 2000, 1 );
@@ -13,24 +31,27 @@ $(function() {
     $('.main-title-container p:nth-child(1)').fadeTo( 2000, 1 );
     $('.main-title-container p:nth-child(2)').fadeTo( 2000, 1 );
     $('.main-screen-container').fadeTo( 2000, 1 );
+    $('.thumbnail').fadeTo( 2000, 1 );
 
 
     //plyr.io
 
 const player1 = new Plyr('#player1', {
   autoplay: true,
-  loop: {active: true}
+  loop: {active: true},
+  muted: true
 });
-
 const player2 = new Plyr('#player2', {
   autoplay: true,
-  loop: {active: true}
+  loop: {active: true},
+  muted: true,
+  hideControls: true
 });
 
 
   // Skrollr
 
-  var s = skrollr.init();
+  // var s = skrollr.init();
 
   //ScrollMagic
 
@@ -505,7 +526,8 @@ $(function(){
   {name: '', coords: [40, 140]},
   {name: 'Tokyo', coords: [40, 140]},
 ];
-  $('#world-mapp').vectorMap({map:'world_mill',
+
+  let options = {map:'world_mill',
   markers: cities.map(function(h){ return {name: h.name, latLng: h.coords} }),
   backgroundColor:'',
   zoomOnScroll:false,
@@ -542,7 +564,10 @@ hover: {
 cursor: 'pointer'
     }
   },
-})
+}
+
+$('#world-mapp').vectorMap(options);
+
 
 var circles = $("circle:odd");
 
@@ -553,6 +578,27 @@ scale:5,
 opacity: 0,
 repeat:-1}
 );
+
+//Replace Radar Waves on window resize
+
+$(window).resize(function (){
+  let parent = $('#world-mapp').parent();
+  let child = $('#world-mapp');
+  child.empty();
+  $('#world-mapp').remove();
+  parent.append(child);
+  $('#world-mapp').vectorMap(options);
+
+  var circles = $("circle:odd");
+
+  TweenMax.to(circles, 2, {
+  ease: Linear.easeNone,
+  transformOrigin:"center center",
+  scale:5,
+  opacity: 0,
+  repeat:-1}
+  );
+})
 
 // var myScroll = new IScroll('.wrapper');
 
