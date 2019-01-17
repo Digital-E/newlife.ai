@@ -147,7 +147,6 @@ body {
   width: 71%;
   left: 50%;
   top: 50%;
-  opacity: 0;
   font-family: 'basicsans7';
   font-size: 53pt;
   color: white;
@@ -262,7 +261,6 @@ body {
   left: 50%;
   top: 50%;
   width: 71%;
-  opacity: 0;
   font-family: 'basicsans7';
   font-size: 45pt;
   color: white;
