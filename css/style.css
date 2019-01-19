@@ -4,6 +4,9 @@
 }
 
 html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -19,7 +22,7 @@ body {
   top: 0;
   width: 100%;
   height: 200px;
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
   z-index: 99;
 }
 
@@ -28,7 +31,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 200px;
-  background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+  background: linear-gradient(360deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
   z-index: 99;
 }
 
@@ -45,11 +48,45 @@ body {
   z-index: 999;
 }
 
+.menu {
+  font-family:'Roboto';
+  font-weight: 500;
+  font-size: 13px;
+  color: white;
+  list-style: none;
+  margin-top: 170px;
+  margin-left: 44px;
+  opacity: 0;
+}
+
+/* .menu ul li:nth-child(n+2) {
+  opacity: 0.3;
+  filter: blur(1px);
+} */
+
+.scroll-to-element {
+  height:20px;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  transform-origin: top left;
+  transition-duration: 0.1s;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
 .logo {
   opacity:0;
   position: fixed;
   margin-left: 75px;
-  margin-top: 50px;
+  margin-top: 75px;
   width: 75px;
 }
 
@@ -67,7 +104,7 @@ body {
   right: 0;
   width: 110px;
   margin-right: 75px;
-  margin-top: 50px;
+  margin-top: 75px;
 }
 
 .download-button:hover {
@@ -108,16 +145,11 @@ body {
   font-size: 30px;
 }
 
-#plyr-vimeo1 {
-  position: absolute;
-  left: -3px;
-}
-
 .main-screen-container {
   opacity: 0;
   display: block;
   margin: auto;
-  border-radius: 20px;
+  border-radius: 35px;
   background-color: black;
   background-image: url("../bgnewlife.png");
   background-repeat: no-repeat;
@@ -256,17 +288,18 @@ body {
   color: #b2ff59;
 }
 
-.div-5 .text-block {
+.div-5 .text-block2 {
   position: absolute;
+  height: 200px;
+  width: 71%;
   left: 50%;
   top: 50%;
-  width: 71%;
   font-family: 'basicsans7';
-  font-size: 45pt;
+  font-size: 53pt;
   color: white;
   transform: translate(-50%,-50%);
   line-height: 75px;
-  z-index: 9;
+  z-index: 1;
 }
 
 .div-6 {
@@ -427,4 +460,41 @@ body {
   top: 175px;
   transform: rotate(-90deg);
   transform-origin: left;
+}
+.invite-capsule-container {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  top: calc(100vh - 100px);
+  z-index: 999;
+}
+.invite-capsule {
+  display: flex;
+  font-family: 'basicsans7';
+  color: white;
+  align-items: center;
+  justify-content: center;
+  margin-right: 80px;
+  /* background-color: white; */
+  font-size: 17px;
+  height: 55px;
+  width: 120px;
+  /* padding: 15px 20px; */
+  border: 1px solid gray;
+  border-radius: 15px;
+  z-index: 999;
+  opacity: 0;
+}
+
+.sound-icon {
+  margin-left: 80px;
+  height: 50px;
+  width: 50px;
+  opacity: 0;
+}
+
+#div7,#div8,#div9 {
+  height: 100vh;
 }

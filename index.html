@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.plyr.io/3.4.8/plyr.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./js/jquery-jvectormap-2.0.3/jquery-jvectormap-2.0.3.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -45,6 +46,13 @@
 
     <!-- Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+    <!-- Rellax.js -->
+    <!-- <script src="./js/rellax-master/rellax.min.js"></script> -->
+
+    <!-- Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+
 
  </head>
 
@@ -214,24 +222,40 @@
   <line class="st3" x1="115.4" y1="24.3" x2="115.4" y2="90.8"/>
 </svg>
      </div>
-   </div>
 
+
+    <!-- Menu -->
+
+    <div class="menu">
+      <ul>
+        <li><a data-scroll href="#home">Home</a></li>
+        <li><a data-scroll href="#values">Values</a></li>
+        <li><a data-scroll href="#video">Video</a></li>
+        <li><a data-scroll href="#manifesto">Manifesto</a></li>
+        <li><a data-scroll href="#worldmap">World Map</a></li>
+        <li><a data-scroll href="#div7">Home</a></li>
+        <li><a data-scroll href="#div8">Values</a></li>
+        <li><a data-scroll href="#div9">Video</a></li>
+      </ul>
+    </div>
+   </div>
 
    <div class="wrapper">
      <div class="div-1">
-       <div class="thumbnail"></div>
+       <!-- <div class="thumbnail"></div> -->
+       <div class="invite-capsule-container">
+        <div class="sound-icon"><img src="./assets/speaker.svg" alt=""></div>
+        <div class="invite-capsule">Get Invite</div>
+       </div>
        <div class="gradient-top"></div>
        <div class="gradient-bottom"></div>
-       <div class="main-title-container"
-       data-0="opacity:1" data-500="opacity:0">
+       <div class="scroll-to-element" id="home"></div>
+       <div class="main-title-container">
          <p class="main-title-1">The Future Of Life</p>
          <p class="main-title-2">On The Blockchain.</p>
        </div>
     </div>
-
-
      <div id="pinned-trigger1" class="div-2">
-
        <div id="left-title1" class="left-title1">newpower</div>
        <div id="left-title2" class="left-title2">newcoin</div>
        <div id="left-title3" class="left-title3">stakepower</div>
@@ -250,8 +274,8 @@
 
 
        <div id="pinned-element1" class="main-screen-container"
-         data-0="transform:scale(1.5); box-shadow: 0px 0px 50px rgba(255,255,255, 0.3)"
-         data-1200="transform:scale(1); box-shadow: 0px 0px 120px rgba(255,255,255, 0.8)"
+         data-0="transform:scale(1.8); box-shadow: 0px 0px 50px rgba(255,255,255, 0.3)"
+         data-1200="transform:scale(1.3); box-shadow: 0px 0px 120px rgba(255,255,255, 0.8)"
        >
 
       <div id="player1" data-plyr-provider="vimeo" data-plyr-embed-id="304351216"></div>
@@ -260,7 +284,7 @@
      </div>
 
    <div id="pinned-trigger2" class="div-3">
-
+    <div class="scroll-to-element" id="values"></div>
      <div class="text-block">
        <!-- Migos is an American hip hop trio from Lawrenceville, Georgia, founded in 2008. -->
      </div>
@@ -277,19 +301,13 @@
    </div>
 
    <div class="div-4">
-<!--
-     <div id="plyr-vimeo2"
-     data-type="vimeo"
-     data-2800="opacity:0"
-     data-3500="opacity:1"
-     ></div> -->
+     <div class="scroll-to-element" id="video"></div>
 <div id="player2" data-plyr-provider="vimeo" data-plyr-embed-id="286116952"></div>
 </div>
 
    <div id="pinned-trigger3" class="div-5">
-     <div class="text-block">
-       Migos is an American hip hop trio from Lawrenceville, Georgia, founded in 2008.
-     </div>
+     <div class="scroll-to-element" id="manifesto"></div>
+     <div class="text-block2"></div>
      <div class="images">
        <div class="div-5-img1" id="div-5-img1" >
          <img src="./assets/photos-NL-optimized/gelya.jpg" alt="">
@@ -301,7 +319,7 @@
    </div>
 
    <div class="div-6">
-
+     <div class="scroll-to-element" id="worldmap"></div>
      <div id="world-mapp" style="width: 100%; height: 100%">
 
      </div>
@@ -309,7 +327,17 @@
    </div>
 
    <div class="div-7">
+     <div class="scroll-to-element" id="div7"></div>
 
+   </div>
+
+   <div class="div-8">
+    <div class="scroll-to-element" id="div8"></div>
+
+   </div>
+
+   <div class="div-9">
+     <div class="scroll-to-element" id="div9"></div>
 
    </div>
 

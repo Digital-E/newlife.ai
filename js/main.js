@@ -31,7 +31,9 @@ $(function() {
     $('.main-title-container p:nth-child(1)').fadeTo( 2000, 1 );
     $('.main-title-container p:nth-child(2)').fadeTo( 2000, 1 );
     $('.main-screen-container').fadeTo( 2000, 1 );
-    $('.thumbnail').fadeTo( 2000, 1 );
+    $('.menu').fadeTo( 2000, 1 );
+    $('.invite-capsule').fadeTo( 2000, 1 );
+    $('.sound-icon').fadeTo( 2000, 1 );
 
 
     //plyr.io
@@ -39,19 +41,44 @@ $(function() {
 const player1 = new Plyr('#player1', {
   autoplay: true,
   loop: {active: true},
-  muted: true
+}).on('ready', event => {
+    let player = event.detail.plyr;
+    player.volume = 0;
 });
+
 const player2 = new Plyr('#player2', {
   autoplay: true,
   loop: {active: true},
-  muted: true,
-  hideControls: true
+}).on('ready', event => {
+    let player = event.detail.plyr;
+    var soundOn = true;
+    player.volume = 1;
+
+    $('.sound-icon').on('click', function(){
+      if (soundOn == true) {
+        player.volume = 0;
+          $(this).css({'opacity': 0.3})
+      } else {
+        player.volume = 1;
+        $(this).css({'opacity': 1})
+      }
+      soundOn = !soundOn;
+    }
+  )
 });
+
+// $('.plyr').on('ready', event => {
+//     let player = event.detail.plyr;
+//     console.log(player);
+//     $('.sound-icon').on('click', function(){
+//       player.volume = 1;
+//     })
+// });
 
 
   // Skrollr
 
-  // var s = skrollr.init();
+  var s = skrollr.init();
 
   //ScrollMagic
 
@@ -600,7 +627,7 @@ $(window).resize(function (){
   );
 })
 
-// var myScroll = new IScroll('.wrapper');
+// Autotype
 
 var optionsTyped = {
   strings: ["Migos","Migos is an American hip hop trio from Lawrenceville, Georgia, founded in 2008."],
@@ -610,6 +637,116 @@ var optionsTyped = {
   cursorChar: '|',
 }
 
-var typed = new Typed(".text-block", optionsTyped);
+var typed2 = new Typed(".text-block2", optionsTyped);
+
+var typed1 = new Typed(".text-block", optionsTyped);
+
+// Smooth Scroll
+
+var scroll = new SmoothScroll('a[href*="#"]');
+
+//Menu Select script
+
+ $.fn.filterOpacity = function (index, opacity) {
+
+   var number = index;
+
+   $(this).filter(
+     function( index ) {
+       return index == number;
+ }).css({'transform':'scale(1)','filter':'blur(1px)','opacity':opacity})
+};
+
+  $.fn.filterAll = function (indexArray, opacityArray) {
+    for(i=0; i < indexArray.length; i++) {
+      $(this).filterOpacity(indexArray[i],opacityArray[i]);
+    }
+  }
+
+  let indexArray = [0,1,2,3,4,5,6,7];
+  let opacityArray = [1,0.8,0.7,0.6,0.5,0.4,0.3,0.2];
+
+  $('.menu').children().children().filterAll(indexArray, opacityArray);
+  $('.menu').children().children().eq(0).css({'transform':'scale(1.1)','filter':'blur(0)'});
+
+// $('.menu').children().children().on('click', function(){
+//   $(this).parent().children().animate({'opacity':'0.3', 'filter': 'blur(1px)'}, 800).css({'filter': 'blur(1px)'});
+//   $(this).animate({'opacity':'1'}, 1000).css({'filter': 'blur(0)'});
+//   })
+
+  $.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+  };
+
+$(window).on('resize scroll', function(){
+  $('.scroll-to-element').each(function() {
+    if ($(this).isInViewport()) {
+      var active = $(this).attr('id');
+
+      if(active === 'values') {
+        let indexArray = [0,1,2,3,4,5,6,7];
+        let opacityArray = [0.8,1,0.8,0.7,0.6,0.5,0.4,0.3];
+
+        $('.menu').children().children().filterAll(indexArray, opacityArray);
+        $('.menu').children().children().eq(1).css({'transform':'scale(1.1)','filter':'blur(0)'});
+
+      }
+      else if (active === 'video') {
+        let indexArray = [0,1,2,3,4,5,6,7];
+        let opacityArray = [0.7,0.8,1,0.8,0.7,0.6,0.5,0.4];
+
+        $('.menu').children().children().filterAll(indexArray, opacityArray);
+        $('.menu').children().children().eq(2).css({'transform':'scale(1.1)','filter':'blur(0)'});
+
+      } else if (active === 'manifesto') {
+        let indexArray = [0,1,2,3,4,5,6,7];
+        let opacityArray = [0.6,0.7,0.8,1,0.8,0.7,0.6,0.5];
+
+        $('.menu').children().children().filterAll(indexArray, opacityArray);
+        $('.menu').children().children().eq(3).css({'transform':'scale(1.1)','filter':'blur(0)'});
+
+      } else if (active === 'worldmap') {
+        let indexArray = [0,1,2,3,4,5,6,7];
+        let opacityArray = [0.5,0.6,0.7,0.8,1,0.8,0.7,0.6];
+
+        $('.menu').children().children().filterAll(indexArray, opacityArray);
+        $('.menu').children().children().eq(4).css({'transform':'scale(1.1)','filter':'blur(0)'});
+
+      } else if (active === 'home') {
+        let indexArray = [0,1,2,3,4,5,6,7];
+        let opacityArray = [1,0.8,0.7,0.6,0.5,0.4,0.3,0.2];
+
+        $('.menu').children().children().filterAll(indexArray, opacityArray);
+        $('.menu').children().children().eq(0).css({'transform':'scale(1.1)','filter':'blur(0)'});
+
+      } else if (active === 'div7') {
+        let indexArray = [0,1,2,3,4,5,6,7];
+        let opacityArray = [0.4,0.5,0.6,0.7,0.8,1,0.8,0.7];
+
+        $('.menu').children().children().filterAll(indexArray, opacityArray);
+        $('.menu').children().children().eq(5).css({'transform':'scale(1.1)','filter':'blur(0)'});
+
+      } else if (active === 'div8') {
+        let indexArray = [0,1,2,3,4,5,6,7];
+        let opacityArray = [0.3,0.4,0.5,0.6,0.7,0.8,1,0.8];
+
+        $('.menu').children().children().filterAll(indexArray, opacityArray);
+        $('.menu').children().children().eq(6).css({'transform':'scale(1.1)','filter':'blur(0)'});
+
+      } else if (active === 'div9') {
+        let indexArray = [0,1,2,3,4,5,6,7];
+        let opacityArray = [0.2,0.3,0.4,0.5,0.6,0.7,0.8,1];
+
+        $('.menu').children().children().filterAll(indexArray, opacityArray);
+        $('.menu').children().children().eq(7).css({'transform':'scale(1.1)','filter':'blur(0)'});
+
+      }
+    }
+  });
+})
 
 });
