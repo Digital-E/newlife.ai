@@ -53,8 +53,8 @@ body {
   font-size: 13px;
   color: white;
   list-style: none;
-  margin-top: 120px;
-  margin-left: 5px;
+  margin-top: 90px;
+  margin-left: -10px;
   opacity: 0;
 }
 
@@ -94,7 +94,7 @@ body {
   position: fixed;
   margin-left: 25px;
   margin-top: 25px;
-  width: 75px;
+  width: 50px;
 }
 
 @media (min-width: 576px) {
@@ -119,7 +119,7 @@ body {
   opacity:0;
   position: fixed;
   right: 0;
-  width: 110px;
+  width: 70px;
   margin-right: 20px;
   margin-top: 30px;
 }
@@ -164,6 +164,7 @@ body {
 
 .main-title-container {
   position: absolute;
+  width: 80%;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
@@ -181,7 +182,32 @@ body {
 .main-title-container p:nth-child(2) {
   opacity:0;
   position: relative;
-  font-size: 30px;
+  font-size: 20px;
+}
+
+@media (min-width: 576px) {
+
+  .main-title-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "basicsans7";
+    color: white;
+  }
+
+  .main-title-container p:nth-child(1) {
+    opacity:0;
+    position: relative;
+    font-size: 45px;
+    font-weight: bold;
+  }
+
+  .main-title-container p:nth-child(2) {
+    opacity:0;
+    position: relative;
+    font-size: 30px;
+  }
 }
 
 .main-screen-container {
@@ -227,10 +253,20 @@ body {
 
 .div-3 {
   position: relative;
-  margin: 250px 70px 250px 20px;
-  height: 100vh;
+  margin: 0px 70px 0px 20px;
+  height: 70vh;
   background-color: transparent;
   opacity: 1;
+}
+
+@media (min-width: 576px) {
+  .div-3 {
+    position: relative;
+    margin: 250px 70px 250px 20px;
+    height: 100vh;
+    background-color: transparent;
+    opacity: 1;
+  }
 }
 
 .div-3 .text-block {
@@ -335,16 +371,32 @@ body {
 
 .div-4 {
   position: relative;
-  height: 100vh;
-  width: 100vw;
+}
+
+@media (min-width: 576px) {
+  .div-4 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+  }
 }
 
 .div-5 {
   position: relative;
-  margin: 250px 70px 250px 20px;
-  height: 100vh;
+  margin: 0px 70px 0px 20px;
+  height: 50vh;
   background-color: transparent;
   opacity: 1;
+}
+
+@media (min-width: 576px) {
+  .div-5 {
+    position: relative;
+    margin: 250px 70px 250px 20px;
+    height: 100vh;
+    background-color: transparent;
+    opacity: 1;
+  }
 }
 
 .div-4 .plyr {
@@ -409,8 +461,16 @@ body {
 
 .div-6 {
   position: relative;
-  height: 100vh;
+  height: 400px;
   width: 100vw;
+}
+
+@media (min-width: 576px) {
+  .div-6 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+  }
 }
 
 .title {
@@ -584,7 +644,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width: 100vw;
-  top: calc(100vh - 80px);
+  top: calc(100vh - 65px);
   z-index: 999;
 }
 
@@ -609,11 +669,11 @@ body {
   margin-right: 30px;
   /* background-color: white; */
   font-size: 17px;
-  height: 55px;
-  width: 120px;
+  height: 35px;
+  width: 100px;
   /* padding: 15px 20px; */
   border: 1px solid gray;
-  border-radius: 15px;
+  border-radius: 10px;
   z-index: 999;
   opacity: 0;
 }
@@ -640,8 +700,8 @@ body {
 
 .sound-icon {
   margin-left: 30px;
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   opacity: 0;
 }
 
