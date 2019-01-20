@@ -7,20 +7,20 @@ $(function() {
 
   //getinvitecode
 
-  let modalThing = $('.thumbnail');
-  let modalWidth = modalThing.width();
-  let openModalThing = false;
-  $('.thumbnail').css({'transform':`translateX(${modalWidth-50}px)`});
-
-  $(modalThing).on('click', function() {
-    if (openModalThing) {
-      TweenLite.to(modalThing, 1, {x: modalWidth - 50});
-    } else {
-      TweenLite.to(modalThing, 1, {x: - modalWidth + 500});
-    }
-    openModalThing = !openModalThing;
-      }
-    );
+  // let modalThing = $('.thumbnail');
+  // let modalWidth = modalThing.width();
+  // let openModalThing = false;
+  // $('.thumbnail').css({'transform':`translateX(${modalWidth-50}px)`});
+  //
+  // $(modalThing).on('click', function() {
+  //   if (openModalThing) {
+  //     TweenLite.to(modalThing, 1, {x: modalWidth - 50});
+  //   } else {
+  //     TweenLite.to(modalThing, 1, {x: - modalWidth + 500});
+  //   }
+  //   openModalThing = !openModalThing;
+  //     }
+  //   );
 
 
   //Elements Fade-in
@@ -68,9 +68,6 @@ const player2 = new Plyr('#player2', {
 });
 
 
-  // Skrollr
-
-  // var s = skrollr.init();
 
   //ScrollMagic
 
@@ -100,11 +97,6 @@ const player2 = new Plyr('#player2', {
     .setTween(blockTweenTimelineScreen)
     .addTo(controller);
 
-
-
-    // var blockTween = new TweenMax.to('#title1', 0.5, {
-    // opacity: '1',
-    // });
 
     //Pin & Animate Left Title1
 
@@ -169,15 +161,6 @@ const player2 = new Plyr('#player2', {
     .setTween(blockTweenTimelineLeftTitle3) // the element we want to pin
     .addTo(controller);
 
-    // setInterval(function(){
-    //   var progress = scene.progress();
-    //   console.log(progress);
-    // },1000);
-
-    // var blockTween2 = new TweenMax.to('#title2', 1.5, {
-    // opacity: '1',
-    // transform: 'translateX(-20px)'
-    // });
 
     //Pin & Animate Right Title1
 
@@ -201,10 +184,6 @@ const player2 = new Plyr('#player2', {
     .setTween(blockTweenTimelineRightTitle1) // the element we want to pin
     .addTo(controller);
 
-    // var blockTween3 = new TweenMax.to('#title3', 1.5, {
-    // opacity: '1',
-    // transform: 'translateX(-20px)'
-    // });
 
     //Pin & Animate Right Title2
 
@@ -228,10 +207,6 @@ const player2 = new Plyr('#player2', {
     .setTween(blockTweenTimelineRightTitle2) // the element we want to pin
     .addTo(controller);
 
-    // var blockTween4 = new TweenMax.to('#title4', 1.5, {
-    // opacity: '1',
-    // transform: 'translateX(-20px)'
-    // });
 
     //Pin & Animate Right Title3
 
@@ -660,10 +635,6 @@ var scroll = new SmoothScroll('a[href*="#"]');
   $('.menu').children().children().filterAll(indexArray, opacityArray);
   $('.menu').children().children().eq(0).css({'transform':'scale(1.1)','filter':'blur(0)'});
 
-// $('.menu').children().children().on('click', function(){
-//   $(this).parent().children().animate({'opacity':'0.3', 'filter': 'blur(1px)'}, 800).css({'filter': 'blur(1px)'});
-//   $(this).animate({'opacity':'1'}, 1000).css({'filter': 'blur(0)'});
-//   })
 
   $.fn.isInViewport = function() {
   var elementTop = $(this).offset().top;
