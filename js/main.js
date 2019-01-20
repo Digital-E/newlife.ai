@@ -67,18 +67,10 @@ const player2 = new Plyr('#player2', {
   )
 });
 
-// $('.plyr').on('ready', event => {
-//     let player = event.detail.plyr;
-//     console.log(player);
-//     $('.sound-icon').on('click', function(){
-//       player.volume = 1;
-//     })
-// });
-
 
   // Skrollr
 
-  var s = skrollr.init();
+  // var s = skrollr.init();
 
   //ScrollMagic
 
@@ -92,18 +84,17 @@ const player2 = new Plyr('#player2', {
 
     var blockTweenTimelineScreen = new TimelineMax();
 
-  //   blockTweenTimelineScreen
-  //   .to('#pinned-element1', 10, {
-  //   opacity: '1',
-  // })
-  //   .to('#pinned-element1', 10, {
-  //       opacity: '0',
-  //     });
+    blockTweenTimelineScreen
+    .to('#pinned-element1', 1, {
+    transform: 'scale(1)',
+    boxShadow: '0px 0px 120px rgba(255,255,255, 0.8)'
+  })
 
     var sceneScreen = new ScrollMagic.Scene({
       triggerElement: '#pinned-trigger1', // starting scene, when reaching this element
       duration: 1500, // pin the element for a total of 400px
-      offset: 215
+      offset: 615,
+      triggerHook: 'onEnter'
     })
     .setPin('#pinned-element1') // the element we want to pin
     .setTween(blockTweenTimelineScreen)
