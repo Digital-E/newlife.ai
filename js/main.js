@@ -1,9 +1,9 @@
 $(function() {
 
   //ScrollBar
-  $("body").prognroll({
-    color: "#b2ff59",
-  });
+  // $("body").prognroll({
+  //   color: "#b2ff59",
+  // });
 
   //getinvitecode
 
@@ -620,7 +620,7 @@ var scroll = new SmoothScroll('a[href*="#"]');
    $(this).filter(
      function( index ) {
        return index == number;
- }).css({'transform':'scale(1)','filter':'blur(1px)','opacity':opacity})
+ }).css({'transform':'scale(1)','filter':'blur(0px)','opacity':opacity})
 };
 
   $.fn.filterAll = function (indexArray, opacityArray) {
