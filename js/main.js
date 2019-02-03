@@ -52,7 +52,7 @@ const player2 = new Plyr('#player2', {
 }).on('ready', event => {
     let player = event.detail.plyr;
     var soundOn = true;
-    player.volume = 1;
+    player.volume = 0;
 
     $('.sound-icon').on('click', function(){
       if (soundOn == true) {

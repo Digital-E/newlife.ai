@@ -10,6 +10,7 @@ html, body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    width: 1200px;
 }
 
 body {
@@ -50,50 +51,47 @@ body {
   z-index: 999;
 }
 
-.menu-mobile {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid white;
-  border-radius: 30px;
-  width: 110px;
-  height: 300px;
-  padding: 10px 0px;
-  margin-left: 20px;
+.new-menu-container {
+  position: absolute;
+  background-image: url('../assets/MainMenuBackground.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 200px;
+  right: 0;
+  margin-right: 50px;
+  margin-top: 50px;
 }
 
-@media (min-width: 576px) {
-  .menu-mobile {
-    border: 0px solid gray;
-    margin-left: 0px;
-  }
+.bottom-menu-container {
+  position: absolute;
+  background-image: url('../assets/BottomMenu.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+  right: 0;
+  bottom: 0;
+  margin-right: 50px;
 }
 
-.menu {
-  font-family:'Roboto';
-  font-weight: 500;
-  font-size: 13px;
-  color: white;
-  list-style: none;
-  margin-top: 0;
-  margin-left: 30px;
-  opacity: 0;
-  display: none;
+.bottom-menu-buttons {
+  position: absolute;
+  margin-left: 60px;
+  margin-top: 150px;
+  transform: scale(0.7);
 }
 
-@media (min-width: 576px) {
   .menu {
     font-family:'Roboto';
     font-weight: 500;
-    font-size: 13px;
+    font-size: 12px;
     color: white;
     list-style: none;
-    margin-bottom: 12px;
-    margin-left: 152px;
+    padding-top: 140px;
+    margin-left: 70px;
     opacity: 0;
   }
-}
 
 .scroll-to-element {
   height:20px;
@@ -122,47 +120,16 @@ body {
     text-decoration: none;
 }
 
-.logo {
-  display: none !important;
-  opacity:0;
-  position: fixed;
-  margin-left: 38px;
-  margin-top: 105px;
-  width: 62px;
-}
 
-.logo svg {
-  fill: white;
-}
-
-
-@media (min-width: 576px) {
   .logo {
     display: inline-block !important;
     opacity:0;
     position: fixed;
-    margin-left: 75px;
-    margin-top: 75px;
-    width: 75px;
+    margin-left: 65px;
+    margin-top: 40px;
+    width: 80px;
   }
-}
 
-.logo2 {
-  display: inline-block;
-  opacity:1;
-  width: 62px;
-}
-
-.logo2 svg {
-  fill: white;
-}
-
-
-@media (min-width: 576px) {
-  .logo2 {
-    display: none;
-  }
-}
 
 .logo:hover {
   cursor: pointer;
@@ -185,14 +152,28 @@ body {
     margin-top: 75px;
   }
 }
-
-.login-button {
-  display: inline-block;
+.login-capsule {
+  position: absolute;
+  display: flex;
   font-family: 'basicsans7';
   color: white;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 50px;
+  font-size: 13px;
+  height: 30px;
+  width: 100px;
+  padding: 5px 0px 5px 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  z-index: 999;
+  opacity: 1;
+  transition-duration: 2s;
+}
+
+.login-link {
   text-decoration: none;
-  font-size: 18px;
-  padding-top: 15px;
+  color: white;
 }
 
 .download-button2 {
@@ -685,19 +666,6 @@ body {
   z-index: 999;
 }
 
-.thumbnail::after {
-  content:'Have an invite code?';
-  font-family: "basicsans7";
-  color: black;
-  text-align: center;
-  display: block;
-  position: absolute;
-  left: 25px;
-  top: 175px;
-  transform: rotate(-90deg);
-  transform-origin: left;
-}
-
 
 .invite-capsule-container {
   position: fixed;
@@ -709,70 +677,66 @@ body {
   z-index: 999;
 }
 
-@media (min-width: 576px) {
-  .invite-capsule-container {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100vw;
-    top: calc(100vh - 100px);
-    z-index: 999;
-  }
+.download-apple {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
 }
 
-.invite-capsule {
-  display: none;
-  border-radius: 50px;
+.download-google {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  margin-left: 10px;
 }
 
-@media (min-width: 576px) {
+.download-buttons {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 70px;
+}
+
   .invite-capsule {
+    position: absolute;
     display: flex;
     font-family: 'basicsans7';
-    color: white;
+    color: #b2ff59;
     align-items: center;
-    justify-content: center;
-    margin-right: 80px;
-    /* background-color: white; */
-    font-size: 17px;
-    height: 55px;
-    width: 120px;
-    /* padding: 15px 20px; */
-    border: 1px solid white;
-    border-radius: 50px;
+    justify-content: space-between;
+    bottom: 0;
+    font-size: 13px;
+    height: 30px;
+    width: 100px;
+    padding: 5px 0px 5px 10px;
+    border: 1px solid #b2ff59;
+    border-radius: 10px;
     z-index: 999;
     opacity: 0;
     transition-duration: 2s;
   }
 
   .invite-capsule:hover {
-    background-color: white;
-    color: black;
+    background-color: rgb(178, 255, 89, 0.3);
     transition-duration: 2s;
     cursor: pointer;
   }
+
+.invite-pill {
+  width: 5px;
+  height: 80%;
+  margin-right: 10px;
+  background-color: #b2ff59;
+  border-radius: 10px;
 }
 
-.invite-capsule2 {
-  display: flex;
-  font-family: 'basicsans7';
-  color: white;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  height: 35px;
-  width: 80px;
-  border: 1px solid white;
-  border-radius: 50px;
-  z-index: 999;
+.login-pill {
+  width: 5px;
+  height: 80%;
+  margin-right: 10px;
+  background-color: white;
+  border-radius: 10px;
 }
 
-@media (min-width: 576px) {
-  .invite-capsule2 {
-    display: none;
-  }
-}
 
 .sound-icon {
   margin-left: 30px;
@@ -792,4 +756,46 @@ body {
 
 #div7,#div8,#div9 {
   height: 100vh;
+}
+
+footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 50px;
+  width: 60%;
+  color: white;
+  font-size: 25px;
+  font-family: 'basicsans7';
+}
+
+@media(min-width: 576px) {
+  footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    margin: auto;
+    margin-bottom: 70px;
+    width: 60%;
+    color: white;
+    font-size: 25px;
+    font-family: 'basicsans7';
+  }
+}
+
+.sub {
+  text-align: center;
+}
+
+@media(min-width: 576px) {
+  .sub {
+    text-align: left;
+  }
+}
+
+.undersub {
+  font-size: 12px;
 }
