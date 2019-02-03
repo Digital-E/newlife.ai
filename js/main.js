@@ -1,26 +1,9 @@
 $(function() {
 
-  //ScrollBar
+  // ScrollBar
   // $("body").prognroll({
   //   color: "#b2ff59",
   // });
-
-  //getinvitecode
-
-  // let modalThing = $('.thumbnail');
-  // let modalWidth = modalThing.width();
-  // let openModalThing = false;
-  // $('.thumbnail').css({'transform':`translateX(${modalWidth-50}px)`});
-  //
-  // $(modalThing).on('click', function() {
-  //   if (openModalThing) {
-  //     TweenLite.to(modalThing, 1, {x: modalWidth - 50});
-  //   } else {
-  //     TweenLite.to(modalThing, 1, {x: - modalWidth + 500});
-  //   }
-  //   openModalThing = !openModalThing;
-  //     }
-  //   );
 
 
   //Elements Fade-in
@@ -79,18 +62,26 @@ const player2 = new Plyr('#player2', {
 
   //Pin Central Screen
 
+
     var blockTweenTimelineScreen = new TimelineMax();
 
     blockTweenTimelineScreen
     .to('#pinned-element1', 1, {
-    transform: 'scale(1)',
-    boxShadow: '0px 0px 120px rgba(255,255,255, 0.8)'
+    transform: 'scale(1) translateX(-220px)',
+    boxShadow: '0px 0px 120px rgba(255,255,255, 0.5)',
   })
+
+  .to('#pinned-element1', 5, {
+  transform: 'scale(1) translateX(-225px)',
+  boxShadow: '0px 0px 120px rgba(255,255,255, 0.5)',
+})
+
+    let windowHeight = $(window).height();
 
     var sceneScreen = new ScrollMagic.Scene({
       triggerElement: '#pinned-trigger1', // starting scene, when reaching this element
-      duration: 1500, // pin the element for a total of 400px
-      offset: 615,
+      duration: '400%', // pin the element for a total of 400px
+      offset: windowHeight/2 + 220,
       triggerHook: 'onEnter'
     })
     .setPin('#pinned-element1') // the element we want to pin
@@ -112,8 +103,8 @@ const player2 = new Plyr('#player2', {
 
     var sceneLeftTitle1 = new ScrollMagic.Scene({
       triggerElement: '#pinned-trigger1', // starting scene, when reaching this element
-      duration: 400, // pin the element for a total of 400px
-      offset: 215
+      duration: 800, // pin the element for a total of 400px
+      offset: 615
     })
     .setPin('#left-title1')
     .setTween(blockTweenTimelineLeftTitle1) // the element we want to pin
@@ -133,8 +124,8 @@ const player2 = new Plyr('#player2', {
 
     var sceneLeftTitle2 = new ScrollMagic.Scene({
       triggerElement: '#pinned-trigger1', // starting scene, when reaching this element
-      duration: 400, // pin the element for a total of 400px
-      offset: 615
+      duration: 800, // pin the element for a total of 400px
+      offset: 1415
     })
     .setPin('#left-title2')
     .setTween(blockTweenTimelineLeftTitle2) // the element we want to pin
@@ -154,8 +145,8 @@ const player2 = new Plyr('#player2', {
 
     var sceneLeftTitle3 = new ScrollMagic.Scene({
       triggerElement: '#pinned-trigger1', // starting scene, when reaching this element
-      duration: 400, // pin the element for a total of 400px
-      offset: 1015
+      duration: 800, // pin the element for a total of 400px
+      offset: 2215
     })
     .setPin('#left-title3')
     .setTween(blockTweenTimelineLeftTitle3) // the element we want to pin
@@ -177,8 +168,8 @@ const player2 = new Plyr('#player2', {
 
     var sceneRightTitle1 = new ScrollMagic.Scene({
       triggerElement: '#pinned-trigger1', // starting scene, when reaching this element
-      duration: 400, // pin the element for a total of 400px
-      offset: 300
+      duration: 800, // pin the element for a total of 400px
+      offset: 700
     })
     .setPin('#right-title-1')
     .setTween(blockTweenTimelineRightTitle1) // the element we want to pin
@@ -200,8 +191,8 @@ const player2 = new Plyr('#player2', {
 
     var sceneRightTitle2 = new ScrollMagic.Scene({
       triggerElement: '#pinned-trigger1', // starting scene, when reaching this element
-      duration: 400, // pin the element for a total of 400px
-      offset: 215
+      duration: 800, // pin the element for a total of 400px
+      offset: 615
     })
     .setPin('#right-title-2')
     .setTween(blockTweenTimelineRightTitle2) // the element we want to pin
@@ -223,8 +214,8 @@ const player2 = new Plyr('#player2', {
 
     var sceneRightTitle3 = new ScrollMagic.Scene({
       triggerElement: '#pinned-trigger1', // starting scene, when reaching this element
-      duration: 400, // pin the element for a total of 400px
-      offset: 125
+      duration: 800, // pin the element for a total of 400px
+      offset: 530
     })
     .setPin('#right-title-3')
     .setTween(blockTweenTimelineRightTitle3) // the element we want to pin
@@ -245,14 +236,14 @@ const player2 = new Plyr('#player2', {
 
     var sceneRightTitle4 = new ScrollMagic.Scene({
       triggerElement: '#pinned-trigger1', // starting scene, when reaching this element
-      duration: 400, // pin the element for a total of 400px
-      offset: 525
+      duration: 800, // pin the element for a total of 400px
+      offset: 1500
     })
     .setPin('#right-title-4')
     .setTween(blockTweenTimelineRightTitle4) // the element we want to pin
     .addTo(controller);
 
-    //Pin & Animate Right Title5
+  //   //Pin & Animate Right Title5
 
     var blockTweenTimelineRightTitle5 = new TimelineMax();
 
@@ -267,14 +258,14 @@ const player2 = new Plyr('#player2', {
 
     var sceneRightTitle5 = new ScrollMagic.Scene({
       triggerElement: '#pinned-trigger1', // starting scene, when reaching this element
-      duration: 400, // pin the element for a total of 400px
-      offset: 625
+      duration: 800, // pin the element for a total of 400px
+      offset: 1415
     })
     .setPin('#right-title-5')
     .setTween(blockTweenTimelineRightTitle5) // the element we want to pin
     .addTo(controller);
 
-    //Pin & Animate Right Title6
+  //   //Pin & Animate Right Title6
 
     var blockTweenTimelineRightTitle6 = new TimelineMax();
 
@@ -289,14 +280,14 @@ const player2 = new Plyr('#player2', {
 
     var sceneRightTitle6 = new ScrollMagic.Scene({
       triggerElement: '#pinned-trigger1', // starting scene, when reaching this element
-      duration: 400, // pin the element for a total of 400px
-      offset: 725
+      duration: 800, // pin the element for a total of 400px
+      offset: 1330
     })
     .setPin('#right-title-6')
     .setTween(blockTweenTimelineRightTitle6) // the element we want to pin
     .addTo(controller);
-
-    //Pin & Animate Right Title7
+  //
+  //   //Pin & Animate Right Title7
 
     var blockTweenTimelineRightTitle7 = new TimelineMax();
 
@@ -311,14 +302,14 @@ const player2 = new Plyr('#player2', {
 
     var sceneRightTitle7 = new ScrollMagic.Scene({
       triggerElement: '#pinned-trigger1', // starting scene, when reaching this element
-      duration: 400, // pin the element for a total of 400px
-      offset: 1115
+      duration: 800, // pin the element for a total of 400px
+      offset: 2300
     })
     .setPin('#right-title-7')
     .setTween(blockTweenTimelineRightTitle7) // the element we want to pin
     .addTo(controller);
-
-    //Pin & Animate Right Title8
+  //
+  //   //Pin & Animate Right Title8
 
     var blockTweenTimelineRightTitle8 = new TimelineMax();
 
@@ -333,14 +324,14 @@ const player2 = new Plyr('#player2', {
 
     var sceneRightTitle8 = new ScrollMagic.Scene({
       triggerElement: '#pinned-trigger1', // starting scene, when reaching this element
-      duration: 400, // pin the element for a total of 400px
-      offset: 1015
+      duration: 800, // pin the element for a total of 400px
+      offset: 2215
     })
     .setPin('#right-title-8')
     .setTween(blockTweenTimelineRightTitle8) // the element we want to pin
     .addTo(controller);
 
-    //Pin & Animate Right Title9
+  //   //Pin & Animate Right Title9
 
     var blockTweenTimelineRightTitle9 = new TimelineMax();
 
@@ -355,8 +346,8 @@ const player2 = new Plyr('#player2', {
 
     var sceneRightTitle9 = new ScrollMagic.Scene({
       triggerElement: '#pinned-trigger1', // starting scene, when reaching this element
-      duration: 400, // pin the element for a total of 400px
-      offset: 915
+      duration: 800, // pin the element for a total of 400px
+      offset: 2130
     })
     .setPin('#right-title-9')
     .setTween(blockTweenTimelineRightTitle9) // the element we want to pin

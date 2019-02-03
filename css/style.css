@@ -14,7 +14,7 @@ html, body {
 
 body {
   background-color: black;
-  max-width: 1400px;
+  max-width: 1200px;
 }
 
 .gradient-top {
@@ -41,7 +41,7 @@ body {
 
 .bar {
   -webkit-transform-style: preserve-3d;
-  transition-duration: 0.5s;
+  transition-duration: 0.1s;
 }
 
 .navbar {
@@ -50,7 +50,7 @@ body {
   justify-content: flex-end;
   position: fixed;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   z-index: 999;
 }
 
@@ -61,7 +61,7 @@ body {
   height: 400px;
   width: 200px;
   margin-top: 50px;
-  margin-right: 50px;
+  margin-right: 26px;
 }
 
 .bottom-menu-container {
@@ -71,7 +71,7 @@ body {
   height: 200px;
   width: 200px;
   margin-top: -160px;
-  margin-right: 50px;
+  margin-right: 26px;
 }
 
 .bottom-menu-buttons {
@@ -290,6 +290,7 @@ body {
 .div-2 {
   background-color: black;
   opacity: 1;
+  width: 100%;
 }
 
 .div-3 {
@@ -526,39 +527,42 @@ body {
 
 .left-title1 {
   position: absolute;
+  letter-spacing: 2px;
   opacity: 0;
-  margin-top: 215px;
-  left: 25%;
+  margin-top: 465px;
+  left: calc(50% - 5px);
   font-family: "basicsans7";
-  font-size: 18px;
+  font-size: 17px;
   color: white;
 }
 
 .left-title2 {
   position: absolute;
+  letter-spacing: 2px;
   opacity: 0;
-  margin-top: 615px;
-  left: 25%;
+  margin-top: 1265px;
+  left: calc(50% - 5px);
   font-family: "basicsans7";
-  font-size: 18px;
+  font-size: 17px;
   color: white;
 }
 
 .left-title3 {
   position: absolute;
+  letter-spacing: 2px;
   opacity: 0;
-  margin-top: 1015px;
-  left: 25%;
+  margin-top: 2065px;
+  left: calc(50% - 5px);
   font-family: "basicsans7";
-  font-size: 18px;
+  font-size: 17px;
   color: white;
 }
 
 .right-title-1 {
   position: absolute;
   opacity: 0;
-  margin-top: 215px;
-  left: calc(50% + 250px);
+  margin-top: 615px;
+  left: calc(50% + 10px);
   font-family: "basicsans7";
   font-size: 18px;
   color: white;
@@ -568,8 +572,8 @@ body {
 .right-title-2 {
   position: absolute;
   opacity: 0;
-  margin-top: 215px;
-  left: calc(50% + 250px);
+  margin-top: 615px;
+  left: calc(50% + 10px);
   font-family: "basicsans7";
   font-size: 18px;
   color: white;
@@ -579,8 +583,8 @@ body {
 .right-title-3 {
   position: absolute;
   opacity: 0;
-  margin-top: 215px;
-  left: calc(50% + 250px);
+  margin-top: 615px;
+  left: calc(50% + 10px);
   font-family: "basicsans7";
   font-size: 18px;
   color: white;
@@ -590,8 +594,8 @@ body {
 .right-title-4 {
   position: absolute;
   opacity: 0;
-  margin-top: 615px;
-  left: calc(50% + 250px);
+  margin-top: 1415px;
+  left: calc(50% + 10px);
   font-family: "basicsans7";
   font-size: 18px;
   color: white;
@@ -601,8 +605,8 @@ body {
 .right-title-5 {
   position: absolute;
   opacity: 0;
-  margin-top: 615px;
-  left: calc(50% + 250px);
+  margin-top: 1415px;
+  left: calc(50% + 10px);
   font-family: "basicsans7";
   font-size: 18px;
   color: white;
@@ -612,8 +616,8 @@ body {
 .right-title-6 {
   position: absolute;
   opacity: 0;
-  margin-top: 615px;
-  left: calc(50% + 250px);
+  margin-top: 1415px;
+  left: calc(50% + 10px);
   font-family: "basicsans7";
   font-size: 18px;
   color: white;
@@ -623,8 +627,8 @@ body {
 .right-title-7 {
   position: absolute;
   opacity: 0;
-  margin-top: 1015px;
-  left: calc(50% + 250px);
+  margin-top: 2215px;
+  left: calc(50% + 10px);
   font-family: "basicsans7";
   font-size: 18px;
   color: white;
@@ -634,8 +638,8 @@ body {
 .right-title-8 {
   position: absolute;
   opacity: 0;
-  margin-top: 1015px;
-  left: calc(50% + 250px);
+  margin-top: 2215px;
+  left: calc(50% + 10px);
   font-family: "basicsans7";
   font-size: 18px;
   color: white;
@@ -645,8 +649,8 @@ body {
 .right-title-9 {
   position: absolute;
   opacity: 0;
-  margin-top: 1015px;
-  left: calc(50% + 250px);
+  margin-top: 2215px;
+  left: calc(50% + 10px);
   font-family: "basicsans7";
   font-size: 18px;
   color: white;
@@ -672,7 +676,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width:inherit;
-  max-width: 1400px;
+  max-width: 1200px;
   top: calc(100vh - 65px);
   z-index: 999;
 }
@@ -781,7 +785,7 @@ footer {
     margin-bottom: 70px;
     width: 60%;
     color: white;
-    font-size: 25px;
+    font-size: 17px;
     font-family: 'basicsans7';
   }
 }
@@ -797,5 +801,6 @@ footer {
 }
 
 .undersub {
-  font-size: 12px;
+  font-size: 17px;
+  opacity: 0.7;
 }
