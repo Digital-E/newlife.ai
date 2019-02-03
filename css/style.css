@@ -7,14 +7,14 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-    margin: 0;
+    margin: auto;
     padding: 0;
     scroll-behavior: smooth;
-    width: 1200px;
 }
 
 body {
   background-color: black;
+  max-width: 1400px;
 }
 
 .gradient-top {
@@ -46,32 +46,31 @@ body {
 
 .navbar {
   top:0;
+  display: flex;
+  justify-content: flex-end;
   position: fixed;
   width: 100%;
+  max-width: 1400px;
   z-index: 999;
 }
 
 .new-menu-container {
-  position: absolute;
   background-image: url('../assets/MainMenuBackground.png');
   background-size: contain;
   background-repeat: no-repeat;
   height: 400px;
   width: 200px;
-  right: 0;
-  margin-right: 50px;
   margin-top: 50px;
+  margin-right: 50px;
 }
 
 .bottom-menu-container {
-  position: absolute;
   background-image: url('../assets/BottomMenu.png');
   background-size: contain;
   background-repeat: no-repeat;
   height: 200px;
   width: 200px;
-  right: 0;
-  bottom: 0;
+  margin-top: -160px;
   margin-right: 50px;
 }
 
@@ -200,7 +199,7 @@ body {
 .div-1 {
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: black;
   opacity: 1;
 }
@@ -419,7 +418,7 @@ body {
   .div-4 {
     position: relative;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
   }
 }
 
@@ -504,14 +503,14 @@ body {
 .div-6 {
   position: relative;
   height: 400px;
-  width: 100vw;
+  width: 100%;
 }
 
 @media (min-width: 576px) {
   .div-6 {
     position: relative;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
   }
 }
 
@@ -672,7 +671,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100vw;
+  width:inherit;
+  max-width: 1400px;
   top: calc(100vh - 65px);
   z-index: 999;
 }
