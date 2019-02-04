@@ -4,9 +4,6 @@
 }
 
 html, body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
     margin: auto;
     padding: 0;
     scroll-behavior: smooth;
@@ -803,4 +800,26 @@ footer {
 .undersub {
   font-size: 17px;
   opacity: 0.7;
+}
+
+.text-test {
+  color: white;
+  font-size: 24px;
+  margin-left: 50px;
+  font-family: 'Roboto';
+  max-width: 500px;
+}
+
+.text-test-title {
+  color: white;
+  font-size: 24px;
+  font-family: 'Roboto';
+  opacity: 1;
+}
+
+.text-test-body {
+  color: white;
+  font-size: 24px;
+  font-family: 'Roboto';
+  opacity: 0.6;
 }
