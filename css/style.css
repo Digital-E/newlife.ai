@@ -507,6 +507,7 @@ body {
 .div-4 {
   position: relative;
   margin-bottom: 150px;
+  width: 100%;
 }
 
 @media (min-width: 576px) {
@@ -541,7 +542,7 @@ body {
   margin: auto;
   border-radius: 25px;
   overflow: hidden;
-  width: calc(100vw - 100px);
+  width: calc(100vw - 25px);
 }
 
 /* PLYR COLOURS */
@@ -951,15 +952,17 @@ footer {
 }
 
 .text-block-bis {
+  box-sizing: border-box;
   color: white;
   font-size: 26px;
-  margin-left: 0px;
   padding: 0px 20px;
-  margin-bottom: 0px;
   font-family: 'Roboto';
   font-weight: 500;
   line-height: 44px;
-  max-width: 100vw;
+}
+
+.text-block-bis img {
+  max-width: 100%;
 }
 
 .text-block-bis-body {
@@ -991,7 +994,7 @@ footer {
 
 .mobilebar {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   bottom: 0;
 }
 
