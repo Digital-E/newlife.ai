@@ -1,16 +1,10 @@
 $(function() {
 
-  // ScrollBar
-  // $("body").prognroll({
-  //   color: "#b2ff59",
-  // });
-
-
   //Elements Fade-in
 
-    $('.logo').fadeTo( 2000, 1 );
-    $('.download-button').fadeTo( 2000, 1 );
-    $('.logo').fadeTo( 2000, 1 );
+    $('.logo').fadeTo( 2000, 0.8 );
+    $('.logo-mobile').fadeTo( 2000, 1 );
+    $('.download-buttons').fadeTo( 2000, 0.8 );
     $('.main-title-container p:nth-child(1)').fadeTo( 2000, 1 );
     $('.main-title-container p:nth-child(2)').fadeTo( 2000, 1 );
     $('.main-screen-container').fadeTo( 2000, 1 );
@@ -55,8 +49,11 @@ const player2 = new Plyr('#player2', {
   //ScrollMagic
 
   //Initiate controller
+  var controller;
 
-    var controller = new ScrollMagic.Controller();
+  if ( $(window).width() > 576) {      
+    controller = new ScrollMagic.Controller(); 
+  } 
 
 //<Div-1> Animations
 
@@ -589,7 +586,7 @@ $(window).resize(function (){
 var optionsTyped = {
   strings: ["Migos","Migos is an American hip hop trio from Lawrenceville, Georgia, founded in 2008."],
   typeSpeed: 50,
-  loop: true,
+  loop: false,
   showCursor: true,
   cursorChar: '|',
 }
