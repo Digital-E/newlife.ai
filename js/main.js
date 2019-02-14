@@ -583,17 +583,21 @@ $(window).resize(function (){
 
 // Autotype
 
-var optionsTyped = {
-  strings: ["Migos","Migos is an American hip hop trio from Lawrenceville, Georgia, founded in 2008."],
+var optionsTyped1 = {
+  strings: ["We","We are the infinite decentralised collective your parents warned you about."],
   typeSpeed: 50,
   loop: false,
-  showCursor: true,
-  cursorChar: '|',
 }
 
-var typed2 = new Typed(".text-block2", optionsTyped);
+var optionsTyped2 = {
+  strings: ["A.I.","A.I. assisted curators measure your clout, which defines your earnings."],
+  typeSpeed: 50,
+  loop: false,
+}
 
-var typed1 = new Typed(".text-block", optionsTyped);
+var typed2;
+
+var typed1;
 
 // Smooth Scroll
 
@@ -696,7 +700,19 @@ $(window).on('resize scroll', function(){
 
       }
     }
+
+    if($('.text-block').isInViewport() && !$('.text-block').attr("id")) {
+      typed1 = new Typed(".text-block", optionsTyped1);
+      $(".text-block").attr("id", "done");
+    };
+
+    if($('.text-block2').isInViewport() && !$('.text-block2').attr("id")) {
+      typed2 = new Typed(".text-block2", optionsTyped2);
+      $(".text-block2").attr("id", "done");
+    };
+
   });
+
 })
 
 });

@@ -615,6 +615,32 @@ body {
   }
 }
 
+.div-6 .text-block {
+  position: relative;
+  width: 90%;
+  left: 0;
+  top: 0;
+  font-family: 'basicsans7';
+  font-size: 25pt;
+  color: white;
+  z-index: 1;
+  margin-left: 25px;
+}
+
+@media(min-width: 576px) {
+  .div-6 .text-block {
+    position: relative;
+    width: 90%;
+    left: 0;
+    top: 0;
+    font-family: 'basicsans7';
+    font-size: 53pt;
+    color: white;
+    z-index: 1;
+    margin-left: 160px;
+  }
+}
+
 .title {
   display: none;
 }
