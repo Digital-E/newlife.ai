@@ -10,8 +10,40 @@ $(function() {
     $('.main-screen-container').fadeTo( 2000, 1 );
     $('.menu').fadeTo( 2000, 1 );
     $('.invite-capsule').fadeTo( 2000, 1 );
-    $('.sound-icon').fadeTo( 2000, 1 );
+    $('.sound-icon-2').fadeTo( 2000, 1 );
 
+
+//Get Invite
+
+  $('.invite-capsule').on('click', function() {
+    
+    $('.new-menu-container, .bottom-menu-container, .blur').toggleClass("blurAll");
+
+    vex.dialog.alert({
+      message: 'How to get invited?',
+      input: [
+        '<div class="modal-subtitle">',
+        'Entering NEW LIFE AI requires an invitation. If you don\'t have one there are two options:',
+        '</div>',
+        '<br/>',
+        '<div class="modal-socials">',
+        '<img src="./assets/facebook-white.svg">',
+        '<img src="./assets/instagram-white.svg">',
+        '</div>',
+        '<div class="modal-subtitle-2">',
+        'Go to NEW LIFE AI\'s <u>Facebook</u> or <u>Instagram</u> page and see which of your friends already follow NEW LIFE AI. They may already be registered.',
+        '</div>',
+    ].join(''),
+      callback: function (value) {
+          if (value) {
+            $('.new-menu-container, .bottom-menu-container, .blur').toggleClass("blurAll");
+          } else {
+            $('.new-menu-container, .bottom-menu-container, .blur').toggleClass("blurAll");
+          }
+      }
+  })
+
+  })  
 
     //plyr.io
 
@@ -31,7 +63,7 @@ const player2 = new Plyr('#player2', {
     var soundOn = true;
     player.volume = 0;
 
-    $('.sound-icon').on('click', function(){
+    $('.sound-icon-2').on('click', function(){
       if (soundOn == true) {
         player.volume = 0;
           $(this).css({'opacity': 0.3})
