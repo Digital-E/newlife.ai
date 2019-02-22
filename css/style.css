@@ -14,6 +14,33 @@ body {
   max-width: 1200px;
 }
 
+.CTA-button {
+  font-family: 'roboto';
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 50px;
+  height: 45px;
+  width: 140px;
+  color: white;
+  margin: 0 auto;
+  transition-duration: 1s;
+}
+
+  @media(min-width: 576px) {
+    .CTA-button {
+      margin: 0 180px;
+    }
+  }
+
+.CTA-button:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
 .vex-content {
   background: transparent !important;
 }
@@ -72,13 +99,18 @@ body {
 }
 
 .blurAll {
-  filter: blur(20px);
+  filter: blur(30px);
+  transition-duration: 2s;
+}
+
+.blur {
   transition-duration: 2s;
 }
 
 .gradient-top {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 200px;
   background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
@@ -88,6 +120,7 @@ body {
 .gradient-bottom {
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: 200px;
   background: linear-gradient(360deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
@@ -115,6 +148,7 @@ body {
 
 .new-menu-container {
   display: none;
+  transition-duration: 2s;
 }
 
 @media(min-width: 576px) {
@@ -127,6 +161,7 @@ body {
     width: 200px;
     margin-top: 50px;
     margin-right: 26px;
+    transition-duration: 2s;
   }
 }
 
@@ -337,6 +372,17 @@ body {
   position: relative;
   font-size: 45px;
   font-weight: bold;
+  padding-left: 0px;
+}
+
+@media(min-width: 576px) {
+  .main-title-container p:nth-child(1) {
+    opacity:0;
+    position: relative;
+    font-size: 45px;
+    font-weight: bold;
+    padding-left: 60px;
+  }
 }
 
 .main-title-container p:nth-child(2) {
@@ -423,7 +469,7 @@ body {
 @media (min-width: 576px) {
   .div-3 {
     position: relative;
-    margin: 250px 70px 250px 20px;
+    margin: 250px 0px 0px 0px;
     height: 100vh;
     background-color: transparent;
     opacity: 1;
@@ -441,6 +487,7 @@ body {
   color: white;
   transform: translate(-50%,-50%);
   z-index: 1;
+  padding-left: 40px;
 }
 
 @media (min-width: 576px) {
@@ -456,6 +503,7 @@ body {
     transform: translate(-50%,-50%);
     line-height: 75px;
     z-index: 1;
+    padding-left: 0;
   }
 }
 
@@ -500,7 +548,7 @@ body {
 .div-3-img1 {
   position: absolute;
   top: 200px;
-  margin-left: 50px;
+  margin-left: 35px;
   transform-origin:'50% 50%';
   transform: scale(1.5);
 }
@@ -508,7 +556,7 @@ body {
 .div-3-img2 {
   position: absolute;
   top: 200px;
-  right: 50px;
+  right: 35px;
   transform-origin:'50% 50%';
   transform: scale(1.5);
 }
@@ -516,7 +564,7 @@ body {
 .div-5-img1 {
   position: absolute;
   top: 200px;
-  margin-left: 50px;
+  margin-left: 35px;
   transform-origin:'50% 50%';
   transform: scale(1.5);
 }
@@ -524,7 +572,7 @@ body {
 .div-5-img2 {
   position: absolute;
   top: 200px;
-  right: 50px;
+  right: 35px;
   transform-origin:'50% 50%';
   transform: scale(1.5);
 }
@@ -534,7 +582,7 @@ body {
   .div-3-img1 {
     position: absolute;
     top: 200px;
-    margin-left: 100px;
+    margin-left: 0px;
     transform-origin:'50% 50%';
     transform: scale(1.5);
   }
@@ -542,7 +590,7 @@ body {
   .div-3-img2 {
     position: absolute;
     top: 200px;
-    right: 100px;
+    right: 0;
     transform-origin:'50% 50%';
     transform: scale(1.5);
   }
@@ -550,7 +598,7 @@ body {
   .div-5-img1 {
     position: absolute;
     top: 200px;
-    margin-left: 100px;
+    margin-left: 0px;
     transform-origin:'50% 50%';
     transform: scale(1.5);
   }
@@ -558,7 +606,7 @@ body {
   .div-5-img2 {
     position: absolute;
     top: 200px;
-    right: 100px;
+    right: 0;
     transform-origin:'50% 50%';
     transform: scale(1.5);
   }
@@ -592,7 +640,7 @@ body {
 @media (min-width: 576px) {
   .div-5 {
     position: relative;
-    margin: 250px 70px 250px 20px;
+    margin: 250px 70px 0px 20px;
     height: 100vh;
     background-color: transparent;
     opacity: 1;
@@ -678,8 +726,8 @@ body {
 }
 
 .div-6 .text-block {
-  position: relative;
-  width: 90%;
+  position: absolute;
+  width: 80%;
   left: 0;
   top: 0;
   font-family: 'basicsans7';
@@ -692,7 +740,7 @@ body {
 @media(min-width: 576px) {
   .div-6 .text-block {
     position: relative;
-    width: 90%;
+    width: 70%;
     left: 0;
     top: 0;
     font-family: 'basicsans7';
@@ -1007,6 +1055,7 @@ footer {
   color: white;
   font-size: 25px;
   font-family: 'basicsans7';
+  line-height: 36px;
 }
 
 @media(min-width: 576px) {
@@ -1043,10 +1092,12 @@ footer {
   box-sizing: border-box;
   color: white;
   font-size: 26px;
-  padding: 0px 20px;
+  padding: 0px 40px 0px 40px;
   font-family: 'Roboto';
   font-weight: 500;
   line-height: 44px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .text-block-bis img {
@@ -1065,7 +1116,8 @@ footer {
     color: white;
     font-size: 26px;
     margin-left: 140px;
-    margin-bottom: 150px;
+    margin-bottom: 80px;
+    margin-top: 80px;
     font-family: 'Roboto';
     font-weight: 500;
     line-height: 44px;

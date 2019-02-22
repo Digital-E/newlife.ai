@@ -1,5 +1,9 @@
 $(function() {
 
+  //Rellax.js
+
+  // var rellax = new Rellax('.rellax');
+
   //Elements Fade-in
 
     $('.logo').fadeTo( 2000, 0.8 );
