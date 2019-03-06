@@ -1,4 +1,5 @@
 $(function() {
+  
 
   //Rellax.js
 
@@ -13,13 +14,15 @@ $(function() {
     $('.main-title-container p:nth-child(2)').fadeTo( 2000, 1 );
     $('.main-screen-container').fadeTo( 2000, 1 );
     $('.menu').fadeTo( 2000, 1 );
+    $('.new-menu-container').fadeTo( 1000, 1);
+    $('.bottom-menu-container').fadeTo( 2000, 1);
     $('.invite-capsule').fadeTo( 2000, 1 );
-    $('.sound-icon-2').fadeTo( 2000, 1 );
+    $('.sound-icon-2').fadeTo( 2000, 0.8 );
 
 
 //Get Invite
 
-  $('.invite-capsule').on('click', function() {
+  $('.invite-capsule, .CTA-button').on('click', function() {
     
     $('.new-menu-container, .bottom-menu-container, .blur').toggleClass("blurAll");
 
@@ -585,8 +588,18 @@ cursor: 'pointer'
 
 $('#world-mapp').vectorMap(options);
 
-
 var circles = $("circle:odd");
+
+var circlesToAddClasses = $("circle:odd");
+
+circlesToAddClasses.each(function(){
+  $(this).addClass('venobox');
+  $(this).attr('data-vbtype','video');
+  $(this).attr('data-autoplay','true');
+  $(this).attr('data-href','https://vimeo.com/286116952');
+});
+
+$('.venobox').venobox(); 
 
 TweenMax.to(circles, 2, {
 ease: Linear.easeNone,
@@ -677,7 +690,7 @@ $(window).on('resize scroll', function(){
     if ($(this).isInViewport()) {
       var active = $(this).attr('id');
 
-      if(active === 'values') {
+      if(active === 'apppreview') {
         let indexArray = [0,1,2,3,4,5,6,7];
         let opacityArray = [0.8,1,0.8,0.7,0.6,0.5,0.4,0.3];
 
@@ -685,54 +698,47 @@ $(window).on('resize scroll', function(){
         $('.menu').children().children().eq(1).css({'transform':'scale(1.1)','filter':'blur(0)'});
 
       }
-      else if (active === 'video') {
+      else if (active === 'vision') {
         let indexArray = [0,1,2,3,4,5,6,7];
         let opacityArray = [0.7,0.8,1,0.8,0.7,0.6,0.5,0.4];
 
         $('.menu').children().children().filterAll(indexArray, opacityArray);
         $('.menu').children().children().eq(2).css({'transform':'scale(1.1)','filter':'blur(0)'});
 
-      } else if (active === 'manifesto') {
+      } else if (active === 'thehiddenforce') {
         let indexArray = [0,1,2,3,4,5,6,7];
         let opacityArray = [0.6,0.7,0.8,1,0.8,0.7,0.6,0.5];
 
         $('.menu').children().children().filterAll(indexArray, opacityArray);
         $('.menu').children().children().eq(3).css({'transform':'scale(1.1)','filter':'blur(0)'});
 
-      } else if (active === 'worldmap') {
+      } else if (active === 'newpower') {
         let indexArray = [0,1,2,3,4,5,6,7];
         let opacityArray = [0.5,0.6,0.7,0.8,1,0.8,0.7,0.6];
 
         $('.menu').children().children().filterAll(indexArray, opacityArray);
         $('.menu').children().children().eq(4).css({'transform':'scale(1.1)','filter':'blur(0)'});
 
-      } else if (active === 'home') {
+      } else if (active === 'introduction') {
         let indexArray = [0,1,2,3,4,5,6,7];
         let opacityArray = [1,0.8,0.7,0.6,0.5,0.4,0.3,0.2];
 
         $('.menu').children().children().filterAll(indexArray, opacityArray);
         $('.menu').children().children().eq(0).css({'transform':'scale(1.1)','filter':'blur(0)'});
 
-      } else if (active === 'div7') {
+      } else if (active === 'startnow') {
         let indexArray = [0,1,2,3,4,5,6,7];
         let opacityArray = [0.4,0.5,0.6,0.7,0.8,1,0.8,0.7];
 
         $('.menu').children().children().filterAll(indexArray, opacityArray);
         $('.menu').children().children().eq(5).css({'transform':'scale(1.1)','filter':'blur(0)'});
 
-      } else if (active === 'div8') {
+      } else if (active === 'worldwide') {
         let indexArray = [0,1,2,3,4,5,6,7];
         let opacityArray = [0.3,0.4,0.5,0.6,0.7,0.8,1,0.8];
 
         $('.menu').children().children().filterAll(indexArray, opacityArray);
         $('.menu').children().children().eq(6).css({'transform':'scale(1.1)','filter':'blur(0)'});
-
-      } else if (active === 'div9') {
-        let indexArray = [0,1,2,3,4,5,6,7];
-        let opacityArray = [0.2,0.3,0.4,0.5,0.6,0.7,0.8,1];
-
-        $('.menu').children().children().filterAll(indexArray, opacityArray);
-        $('.menu').children().children().eq(7).css({'transform':'scale(1.1)','filter':'blur(0)'});
 
       }
     }
