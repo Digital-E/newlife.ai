@@ -664,14 +664,14 @@ body {
 /* PLYR COLOURS */
 
 .plyr__controls {
-  display: inline-block;
+  display: none;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .plyr__controls {
   display: none;
 }
-}
+} */
 
 .plyr__control--overlaid {
   background-color: #b2ff59;
@@ -691,14 +691,14 @@ body {
 }
 
 .plyr--full-ui.plyr--video .plyr__control--overlaid {
-  display: none;
+  display: inline-block;
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   .plyr--full-ui.plyr--video .plyr__control--overlaid {
     display: none;
   }
-} */
+}
 
 .div-5 .text-block2 {
   position: absolute;
