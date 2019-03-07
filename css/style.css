@@ -663,8 +663,14 @@ body {
 
 /* PLYR COLOURS */
 
-/* .plyr__controls {
+.plyr__controls {
   display: none;
+}
+
+/* @media (min-width: 768px) {
+  .plyr__controls {
+  display: none;
+}
 } */
 
 .plyr__control--overlaid {
@@ -685,7 +691,13 @@ body {
 }
 
 .plyr--full-ui.plyr--video .plyr__control--overlaid {
-  display: none;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .plyr--full-ui.plyr--video .plyr__control--overlaid {
+    display: none;
+  }
 }
 
 .div-5 .text-block2 {
