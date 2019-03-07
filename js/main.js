@@ -628,6 +628,18 @@ $(window).resize(function (){
   opacity: 0,
   repeat:-1}
   );
+
+  var circlesToAddClasses = $("circle:odd");
+
+  circlesToAddClasses.each(function(){
+    $(this).addClass('venobox');
+    $(this).attr('data-vbtype','video');
+    $(this).attr('data-autoplay','true');
+    $(this).attr('data-href','https://vimeo.com/286116952');
+  });
+  
+  $('.venobox').venobox(); 
+
 })
 
 // Autotype
