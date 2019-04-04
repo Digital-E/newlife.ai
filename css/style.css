@@ -9,6 +9,11 @@ html, body {
     scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 body {
   background-color: black;
   max-width: 1200px;
