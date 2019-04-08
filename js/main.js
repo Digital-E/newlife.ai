@@ -69,7 +69,7 @@ const player2 = new Plyr('#player2', {
     let player = event.detail.plyr;
     player.play();
     var soundOn = true;
-    player.volume = 1;
+    player.volume = 0;
 
     $('.sound-icon-2').on('click', function(){
       if (soundOn == true) {
