@@ -67,6 +67,7 @@ const player2 = new Plyr('#player2', {
   loop: {active: true},
 }).on('ready', event => {
     let player = event.detail.plyr;
+    player.play();
     var soundOn = true;
     player.volume = 1;
 
