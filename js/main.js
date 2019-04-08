@@ -38,7 +38,7 @@ $(function() {
         '<img src="./assets/instagram-white.svg">',
         '</div>',
         '<div class="modal-subtitle-2">',
-        'Go to NEW LIFE AI\'s <u>Facebook</u> or <u>Instagram</u> page and see which of your friends already follow NEW LIFE AI. They may already be registered.',
+        'Go to NEW LIFE AI\'s <a href="https://facebook.com/newlifeai" target="_blank"><u>Facebook</u></a> or <a href="https://www.instagram.com/newlife.ai/" target="_blank"><u>Instagram</u></a> page and see which of your friends already follow NEW LIFE AI. They may already be registered.',
         '</div>',
     ].join(''),
       callback: function (value) {
